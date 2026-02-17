@@ -1,11 +1,16 @@
 import { useState } from 'react'
 import './App.css'
+import Spoonacular from './images/week4/download-removebg-preview (20).png'
+
+import { useNavigate } from "react-router-dom"
 
 function Week4() {
   const [count, setCount] = useState(0)
-
+ const navigate = useNavigate()
   return (
-    <div className="bg-amber-50 w-screen h-screen flex justify-center">
+    <div className="bg-amber-50 overflow-hidden w-screen h-screen flex justify-center">
+
+        <div className="fixed inset-0 overflow-hidden pointer-events-none">
       <div className="hidden md:block absolute top-[-70px] right-[-180px] w-[400px] h-[400px] rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 opacity-90" />
       <div className="absolute top-[128px] right-[32px] w-[140px] h-[140px] rounded-full border-2 border-white opacity-70" />
       <div className="hidden md:block absolute bottom-[-10px] right-[150px] w-[400px] h-[400px] rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 opacity-90" />
@@ -13,7 +18,7 @@ function Week4() {
       <div className="hidden md:block absolute top-[-70px] left-[-180px] w-[400px] h-[400px] rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 opacity-90" />
       <div className="absolute top-[128px] left-[120px] z-1 w-[140px] h-[140px] rounded-full border-2 border-white opacity-70" />
       <div className="hidden md:block absolute bottom-[100px] left-[150px] w-[400px] h-[400px] rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 opacity-90" />
-
+</div>
       <div className="bg-white max-w-3xl w-full z-1 shadow-xl overflow-hidden">
         
         {/* Header */}
@@ -47,6 +52,8 @@ function Week4() {
                 TheMealDb: Free of charge, quite limited in terms of functionality compared to other 2. Searching by multiple ingredients was not a part of the free plan which was vital to our project.
               </p>
               <p>
+                <img src={Spoonacular} alt="" className="w-sm h-sm justify-self-center" />
+
                 Settled on Spoonacular as it was most intuitive and also offered a decent free plan for testing purposes. Although if the app was to be made public we would choose Edamam as it allows for much more calls monthly and is the same price as Spoonacular.
               </p>
             </div>
@@ -129,6 +136,25 @@ function Week4() {
               </p>
             </div>
           </section>
+           <div className="fixed bottom-0 left-0 w-full flex justify-center pb-6 pointer-events-none">
+        <div className="pointer-events-auto bg-white shadow-lg rounded-2xl px-6 py-3 flex gap-6 border">
+
+          <button
+            onClick={() => navigate("/week3")}
+            className="px-4 py-2 rounded-xl font-semibold text-gray-700 hover:bg-emerald-100 transition"
+          >
+            Week 3
+          </button>
+
+          <button
+            onClick={() => navigate("/week5")}
+            className="px-4 py-2 rounded-xl font-semibold text-gray-700 hover:bg-emerald-100 transition"
+          >
+            Week 5
+          </button>
+
+        </div>
+      </div>
 
         </div>
       </div>

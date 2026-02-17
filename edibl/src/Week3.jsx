@@ -1,11 +1,18 @@
 import { useState } from 'react'
 import './App.css'
+import manual from './images/week3/manual.png'
+import notis from './images/week3/notis.png'
+import ui from './images/week3/ui.jpeg'
+
+import { useNavigate } from "react-router-dom"
 
 function Week3() {
   const [count, setCount] = useState(0)
-
+  
+ const navigate = useNavigate()
   return (
     <div className="bg-amber-50 w-screen h-screen flex justify-center">
+        <div className="fixed inset-0 overflow-hidden pointer-events-none">
       <div className="hidden md:block absolute top-[-70px] right-[-180px] w-[400px] h-[400px] rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 opacity-90" />
       <div className="absolute top-[128px] right-[32px] w-[140px] h-[140px] rounded-full border-2 border-white opacity-70" />
       <div className="hidden md:block absolute bottom-[-10px] right-[150px] w-[400px] h-[400px] rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 opacity-90" />
@@ -13,7 +20,7 @@ function Week3() {
       <div className="hidden md:block absolute top-[-70px] left-[-180px] w-[400px] h-[400px] rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 opacity-90" />
       <div className="absolute top-[128px] left-[120px] z-1 w-[140px] h-[140px] rounded-full border-2 border-white opacity-70" />
       <div className="hidden md:block absolute bottom-[100px] left-[150px] w-[400px] h-[400px] rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 opacity-90" />
-
+</div>
       <div className="bg-white max-w-3xl w-full z-1 shadow-xl overflow-hidden">
         
         {/* Header */}
@@ -50,6 +57,8 @@ function Week3() {
               <p>
                 In the case of an item not being readable or not being in our product database, we decided to allow users to manually add the information about the product.
               </p>
+                <img src={manual} alt="" className="w-[250px] h-[500px] justify-self-center" />
+
               <p>
                 A small problem arised from this as we needed to figure out how to let users input the products' category in order to get its shelf life information. Allowing for users to type in a category directly could lead to unexpected inputs or inputs which are too broad or specific. We decided to provide a selection field instead containing all of the available options for categories. Users are able to find the category of best fit using search by scrolling through.
               </p>
@@ -66,6 +75,8 @@ function Week3() {
               <p>
                 We developed a simple app ui in this stage too for ease of testing and navigation. It was essentially just a homepage with 4 buttons. Once for adding food to the database. Another one for checking your pantry and all the food available there and the last two were about getting recipes recommendations and viewing your previously made recipes. The ui had a basic green and white colour scheme however we will polish it later as functionality is our priority.
               </p>
+             <img src={ui} alt="" className="w-[250px] h-[500px] justify-self-center" />
+
             </div>
           </section>
 
@@ -114,6 +125,8 @@ function Week3() {
               <p>
                 Firstly had to get user permissions in order to send notifications, same process as with camera permissions so it wasn't much work. Expo-notifications was in general, quite simple to work with but also offered a good amount of customisation. We ended up sticking with quite a basic notification as that's all our app requires for now. Used a test notification to get functionality correct before adding more information and making more complex functions. Daily expiry checks at 9am and if a food had less than 3 days left before its safety window was out.
               </p>
+                <img src={notis} alt="" className="w-[250px] h-[500px] justify-self-center" />
+
             </div>
           </section>
 
@@ -129,6 +142,26 @@ function Week3() {
               </p>
             </div>
           </section>
+
+           <div className="fixed bottom-0 left-0 w-full flex justify-center pb-6 pointer-events-none">
+        <div className="pointer-events-auto bg-white shadow-lg rounded-2xl px-6 py-3 flex gap-6 border">
+
+          <button
+            onClick={() => navigate("/week2")}
+            className="px-4 py-2 rounded-xl font-semibold text-gray-700 hover:bg-emerald-100 transition"
+          >
+            Week 2
+          </button>
+
+          <button
+            onClick={() => navigate("/week4")}
+            className="px-4 py-2 rounded-xl font-semibold text-gray-700 hover:bg-emerald-100 transition"
+          >
+            Week 4
+          </button>
+
+        </div>
+      </div>
 
         </div>
       </div>
