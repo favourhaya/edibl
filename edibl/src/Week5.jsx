@@ -110,6 +110,13 @@ function Week5() {
             Week 4
           </button>
 
+
+         <button
+            onClick={() => navigate("/week6")}
+            className="px-4 py-2 rounded-xl font-semibold text-gray-700 hover:bg-emerald-100 transition"
+          >
+            Week 6
+          </button>
         </div>
       </div>
 
