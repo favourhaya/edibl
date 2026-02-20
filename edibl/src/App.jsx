@@ -5,6 +5,7 @@ import Week3 from "./Week3"
 import Week4 from "./Week4"
 import Week5 from "./Week5"
 import Week6 from "./Week6"
+import futurePlans from "./Future"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/week4" element={<Week4 />} />
         <Route path="/week5" element={<Week5 />} />
         <Route path="/week6" element={<Week6 />} />
+        <Route path="/Future" element={<futurePlans />} />
       </Routes>
     </BrowserRouter>
   )

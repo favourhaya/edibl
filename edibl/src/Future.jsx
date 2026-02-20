@@ -1,11 +1,9 @@
 import { useState } from 'react'
 import './App.css'
-import google from './images/week5/googleauth.png'
-import index from './images/week5/index.png'
-import index2 from './images/week5/index2.png'
+
 import { useNavigate } from "react-router-dom"
 
-function Week5() {
+function futurePlans() {
   const [count, setCount] = useState(0)
    const navigate = useNavigate()
 
@@ -32,17 +30,14 @@ function Week5() {
         <div className="p-8 md:p-12 space-y-12 overflow-y-auto max-h-[calc(100vh-200px)]">
           
           {/* Week Header */}
-          <h2 className="text-4xl font-bold text-gray-800">Week 6</h2>
+          <h2 className="text-4xl font-bold text-gray-800">Future plans and implementations</h2>
 
           {/* Section 1 */}
           <section className="space-y-4">
-            <h3 className="text-2xl font-bold text-gray-900 flex items-center gap-3">
-              <span className="inline-block w-2 h-8 bg-emerald-500 rounded"></span>
-            Beginning of week 6
-            </h3>
+            
             <div className="text-gray-700 leading-relaxed space-y-4 pl-5">
               <p>
-                During week 6 our primary goal was closing any loose ends. We did mostly testing , documentation and cleaning up our codebase.
+                Although our development of the app has concluded, we still have many ideas we intend to implement in the future. Here are the main features we think would be a mix of challenging and interesting.
               </p>
 
              
@@ -53,17 +48,14 @@ function Week5() {
           <section className="space-y-4">
             <h3 className="text-2xl font-bold text-gray-900 flex items-center gap-3">
               <span className="inline-block w-2 h-8 bg-emerald-500 rounded"></span>
-            Testing
+            Household ingredient sharing
+
             </h3>
             <div className="text-gray-700 leading-relaxed space-y-4 pl-5">
               <p>
-We implemented unit testing to ensure all the functions were working correctly and our error handling was sufficient. We wrote these unit test cases for the pantry functions, recipe functions, notification system and the backend server functions too.            
-
+                We plan to implement “households”. Groups of people who can manipulate the same pantry. This would be useful for families, workspaces and roommates. Currently each user has their own pantry meaning they only have control. This feature is planned to be peer to peer and either work by inviting members via email or using location proximity to find households near you.
+            
   </p>
-<p>
-    When testing at first we were confused about which software to use. One key error we made throughout our functional specifications was overlooking testing. At first we used built in node modules such as assert and before/after. Upon further research we found that we could use Jest, a javascript built in framework for testing due to its speed and ease of use.
-
-</p>
             </div>
           </section>
 
@@ -71,11 +63,12 @@ We implemented unit testing to ensure all the functions were working correctly a
           <section className="space-y-4">
             <h3 className="text-2xl font-bold text-gray-900 flex items-center gap-3">
               <span className="inline-block w-2 h-8 bg-emerald-500 rounded"></span>
-Merge conflicts            
+Expanding database
 </h3>
             <div className="text-gray-700 leading-relaxed space-y-4 pl-5">
               <p>
-                    During week 6 we were also receiving more merge conflicts. This was because we were both making many micro- adjustments to many files e.g name name changes. In order to resolve these merge conflicts, we would go on call and systematically go through each page analyzing which changes were made. We then decided to message each other about every change we planned to make no matter how small.
+                We would also like to expand our product and food table. Expanding our product table would increase user experience as this would reduce errors of their scanned items not being present in the database. Improving our food information table would result in better coverage. More niche items would have information regarding them in the table. This would also result in more accurate categorization and predications of safety windows and safety markers.
+
               </p>
             </div>
           </section>
@@ -84,29 +77,18 @@ Merge conflicts
                     <section className="space-y-4">
             <h3 className="text-2xl font-bold text-gray-900 flex items-center gap-3">
               <span className="inline-block w-2 h-8 bg-emerald-500 rounded"></span>
-Error Handling
+Moving away from manual entry to fuzzy
 </h3>
             <div className="text-gray-700 leading-relaxed space-y-4 pl-5">
               <p>
-After unit testing we realized that we needed error handling, especially for our recipe system. This makes sense as our recipe system is pure logic meaning there’s room for human error. One example was handling  duplicates.
+                Another goal would be to implement a fuzzy matching algorithm correctly which categorizes food items with a high level of accuracy. This approach failed during this project as our food information table was not nearly verbose enough however if we do expand, this approach becomes far more viable and practical in the long term.
+
               </p>
             </div>
           </section>
 
 
-               <section className="space-y-4">
-            <h3 className="text-2xl font-bold text-gray-900 flex items-center gap-3">
-              <span className="inline-block w-2 h-8 bg-emerald-500 rounded"></span>
-Ui Design:
-</h3>
-            <div className="text-gray-700 leading-relaxed space-y-4 pl-5">
-              <p>
-                At first we integrated back buttons however both of us decided that we never press back button we simply just swiped left to go back
-Used phone simulator (expo Go) for UI changes as it was instant and easier to test different designs
-
-              </p>
-            </div>
-          </section>
+      
 
 
            <div className="fixed bottom-0 left-0 w-full flex justify-center pb-6 pointer-events-none">
@@ -114,10 +96,10 @@ Used phone simulator (expo Go) for UI changes as it was instant and easier to te
 
 
           <button
-            onClick={() => navigate("/week5")}
+            onClick={() => navigate("/week6")}
             className="px-4 py-2 rounded-xl font-semibold text-gray-700 hover:bg-emerald-100 transition"
           >
-            Week 5
+            Week 6 
           </button>
 
           
@@ -131,4 +113,4 @@ Used phone simulator (expo Go) for UI changes as it was instant and easier to te
   )
 }
 
-export default Week5
+export default futurePlans
