@@ -3,7 +3,7 @@ import './App.css'
 
 import { useNavigate } from "react-router-dom"
 
-function futurePlans() {
+function FuturePlans() {
   const [count, setCount] = useState(0)
    const navigate = useNavigate()
 
@@ -113,4 +113,4 @@ Moving away from manual entry to fuzzy
   )
 }
 
-export default futurePlans
+export default FuturePlans

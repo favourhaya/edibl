@@ -120,6 +120,14 @@ Used phone simulator (expo Go) for UI changes as it was instant and easier to te
             Week 5
           </button>
 
+
+          <button
+            onClick={() => navigate("/futurePlans")}
+            className="px-4 py-2 rounded-xl font-semibold text-gray-700 hover:bg-emerald-100 transition"
+          >
+            Future plans
+          </button>
+
           
 
         </div>

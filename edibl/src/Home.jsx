@@ -133,6 +133,14 @@ function Home() {
            <div className="fixed bottom-0 left-0 w-full flex justify-center pb-6 pointer-events-none">
         <div className="pointer-events-auto bg-white shadow-lg rounded-2xl px-6 py-3 flex gap-6 border">
 
+
+
+         <button
+            onClick={() => navigate("/Survey")}
+            className="px-4 py-2 rounded-xl font-semibold clickable text-gray-700 hover:bg-emerald-100 transition"
+          >
+            Survey Results
+          </button>
           
 
           <button
